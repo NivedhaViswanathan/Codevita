@@ -1,0 +1,36 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int q;
+    cin>>q;
+    int ele,s=0,c=0,k=0;
+    for(int i=0;i<q;i++){
+        cin>>ele;
+        c=0;
+        k=0;
+        s=0;
+        while(s+arr[k]<ele && k<n){
+           s+=arr[k];
+            k++;
+            c+=1;
+        }
+        if(k<n && s+arr[k]>=ele){
+            cout<<c+1<<endl;
+        }
+        else
+            cout<<-1<<endl;
+    }
+    return 0;
+}
