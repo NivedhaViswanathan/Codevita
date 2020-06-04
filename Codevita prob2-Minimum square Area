@@ -1,0 +1,15 @@
+t=int(input())
+while(t>0):
+    l1=[]
+    x=[]
+    y=[]
+    s=[]
+    n=int(input())
+    for i in range(n):
+        s=list(map(int,input().split()))
+        x.append(s[0])
+        y.append(s[1])
+    a=max(x)-min(x)
+    b=max(y)-min(y)
+    print(max(a,b)**2)
+    t-=1
